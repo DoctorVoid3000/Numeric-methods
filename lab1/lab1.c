@@ -249,6 +249,9 @@ int MainLab()
 
 	legend3->AddEntry(R_MAX2, Form("R(x) #leq #frac{max|y^{n+1}(x)|}{(n+1)!}#upoint|#omega_{n+1}(x)|, n = %d", NUM_POINTS_2), "lp");
 
+	canv->SaveAs("Interpolation.pdf");
+	canv2->SaveAs("Uncetarnities.pdf");
+
 	return 0;
 }
 

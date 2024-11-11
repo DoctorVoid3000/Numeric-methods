@@ -14,7 +14,7 @@ void FillY(TVectorD&, TVectorD&);
 void FillSplain(TF1**, TVectorD&, TVectorD&);
 void FillDesign(TF1**);
 void FillUncertainities(TF1**, TF1*, TVectorD&);
-void FillUncertainitiesDesign(TF1**);
+void FillUncertainitiesDesignB1(TF1**);
 void FillKostyl(double*, double*, TVectorD&, TVectorD&);
 void FillX3(TVectorD&);
 void FillY3(TVectorD&, TVectorD&);
@@ -138,11 +138,13 @@ int MainBSplain(){
 
 	TF1 *B1Uncertainities[NUM_POINTS - 1];
 	FillUncertainities(B1Uncertainities, OriginalFunc, x);
-	FillUncertainitiesDesign(B1Uncertainities);
+	FillUncertainitiesDesignB1(B1Uncertainities);
 
 	TF1 *B3Uncertainities[NUM_POINTS - 1];
 	FillUncertainitiesB3(B3Uncertainities, OriginalFunc, X3);
 	FillUncertainitiesDesignB3(B3Uncertainities);
+
+	c1->SaveAs("B-Splains.pdf");
 
 	return 0;
 }
@@ -198,7 +200,7 @@ void FillUncertainities(TF1** B1Uncertainities, TF1* OriginalFunc, TVectorD& x)
 	}
 }
 
-void FillUncertainitiesDesign(TF1** B1Uncertainities)
+void FillUncertainitiesDesignB1(TF1** B1Uncertainities)
 {
 	for (int i = 0; i < NUM_POINTS - 1; ++i)
 	{

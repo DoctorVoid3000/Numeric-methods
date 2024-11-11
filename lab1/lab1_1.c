@@ -177,7 +177,7 @@ int MainLab2()
 	//legend2->AddEntry(R_MAX, Form("R(x) #leq #frac{max|y^{n+1}(x)|}{(n+1)!}#upoint|#omega_{n+1}(x)|, Chebyshev n = %d", NUM_POINTS), "lp");
 	//legend2->AddEntry(R_MAX2, Form("R(x) #leq #frac{max|y^{n+1}(x)|}{(n+1)!}#upoint|#omega_{n+1}(x)|, function n = %d", NUM_POINTS), "lp");
 
-	canv->SaveAs("lab1_1.pdf");
+	canv->SaveAs("Chebyshev.pdf");
 
 	return 0;
 }

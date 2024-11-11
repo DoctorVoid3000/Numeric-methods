@@ -173,7 +173,7 @@ int MainLab2_1()
 	FillUncertainitiesThirdDerive(UncertainitiesThirdDerive, SplainsThirdDerivative, OriginalFunc, x);
 	FillUncertainitiesDesignThirdDerive(UncertainitiesThirdDerive);
 
-	
+	c1->SaveAs("CubicSplain.pdf");
 	return 0;
 }
 
